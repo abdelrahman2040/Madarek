@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const User = require("./models/user.model");
 const path = require("path");
 const livereload = require("livereload");
 const connectLivereload = require("connect-livereload");
