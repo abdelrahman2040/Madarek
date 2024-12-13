@@ -1,12 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const User = require("./models/user.model");
+//const User = require("./models/user.model");
 const path = require("path");
 const livereload = require("livereload");
 const connectLivereload = require("connect-livereload");
 const bcrypt = require("bcrypt"); 
 require("dotenv").config(); // Load environment variables
-
+const cartRoute = require('./routes/cartRoute');
 const port = 3001;
 // App service
 const app = express();
@@ -24,10 +24,15 @@ liveReloadServer.server.once("connection", () => {
     liveReloadServer.refresh("/");
   }, 100);
 });
+
 // Basic test route
 app.get("/", (req, res) => {
   res.send("Hello World, from cs309");
 });
+
+//routes
+app.use('/api/cart', cartRoute);
+
 
 // MongoDB connection and server startup
 mongoose
