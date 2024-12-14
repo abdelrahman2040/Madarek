@@ -7,6 +7,9 @@ const connectLivereload = require("connect-livereload");
 const bcrypt = require("bcrypt"); 
 require("dotenv").config(); // Load environment variables
 const cartRoute = require('./routes/cartRoute');
+const userRoute = require('./routes/userRoute');
+const authRoute = require('./routes/authRoute');
+const bookRoute = require('./routes/bookRoute');
 const port = 3001;
 // App service
 const app = express();
@@ -32,6 +35,9 @@ app.get("/", (req, res) => {
 
 //routes
 app.use('/api/cart', cartRoute);
+app.use('/api/v1/users', userRoute);
+app.use('/api/v1/auth', authRoute);
+app.use('/api/v1/books', bookRoute);
 
 
 // MongoDB connection and server startup
