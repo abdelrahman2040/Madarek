@@ -5,6 +5,7 @@ const path = require("path");
 const livereload = require("livereload");
 const connectLivereload = require("connect-livereload");
 const bcrypt = require("bcrypt"); 
+const bookRoutes = require('./routes/book');  
 require("dotenv").config(); // Load environment variables
 
 const port = 3001;
@@ -18,6 +19,9 @@ liveReloadServer.watch(path.join(__dirname, "public"));
 app.use(connectLivereload());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// book routes
+app.use('/api/books',bookRoutes);
 
 liveReloadServer.server.once("connection", () => {
   setTimeout(() => {
