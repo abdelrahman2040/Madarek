@@ -7,7 +7,7 @@ import{
 } from 'react-router-dom';
 
 import Contact from './Components/Contact';
-//import Login from './Components/Login';
+import Login from './Components/Login';
 import Register from './Components/Register';
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Register" element={<Register />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="*" element={<div>Page Not Found</div>} />
       </Routes>
     </Router>
