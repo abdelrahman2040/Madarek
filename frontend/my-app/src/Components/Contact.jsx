@@ -58,11 +58,6 @@ function Contact() {
                 <img src={linkedin_logo} alt="linkedin-logo" />
                 <img src={youtube_logo} alt="facebook" />
                 <img src={twitter_logo} alt="facebook" />
-                {/* <FaFacebook size={25} />
-                <FaInstagram size={25}  />
-                <FaLinkedin size={25} />
-                <FaYoutube size={25} />
-                <FaTwitter size={25} /> */}
               </div>
 
             </div>

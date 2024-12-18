@@ -13,7 +13,7 @@
     width: 100%;
     max-width: 1200px;
     background-color: white;
-    border-radius: 15px;
+    border-radius: 25px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     display: flex;
     overflow: hidden;
@@ -29,8 +29,8 @@
   }
   
   .contact-info .header-container {
-    display: flex; /* لجعل الصورة والعنوان في نفس السطر */
-    align-items: center; /* محاذاة الصورة والعنوان عموديًا */
+    display: flex; 
+    align-items: center;
   }
   
   .contact-info .container-img {
@@ -42,7 +42,7 @@
     align-items: center;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     border-radius: 15%;
-    margin-right: 10px; /* المسافة بين الصورة والعنوان */
+    margin-right: 10px;
   }
   
   .contact-info .container-img img {
@@ -51,7 +51,7 @@
   }
   
   .contact-info h2 {
-    color: #0d0d0d;
+    color: #0a0835;
     font-size: 2rem;
     margin-bottom: 0.5rem;
   }
@@ -84,11 +84,7 @@
     text-decoration: none;
   }
   
-  .social-icons a:hover {
-    color: #d4b483; /* تغيير اللون عند المرور فوق الأيقونة */
-  }
-  
-  
+
   .contact-form {
     flex: 1;
     background-color: #4357ad;
@@ -107,7 +103,7 @@
 
   
   .contact-form p {
-    color: #48a9a6;
+    color: #c3ac8a;
     font-size: 1.3rem;
     text-align: center;
   }
@@ -158,8 +154,8 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        color: #48a9a6;
-        font-size: 0.9rem;
+        color: #aaa;
+        font-size: 1rem;
     }
     
     .contact-form .form-options input[type="checkbox"] {
@@ -174,8 +170,8 @@
     }
     
     .contact-form .form-options input[type="checkbox"]:checked {
-        background-color: #00a0b0;
-        border-color: #00a0b0;
+        background-color: #af9265;
+        border-color: #af9265;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -205,4 +201,59 @@
     background-color: #00a0b0;
   }
 
+
+  @media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form {
+        flex: none;
+        width: 100%;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+
+    .contact-info {
+        gap: 1rem;
+    }
+
+    .form-fields input,
+    .form-fields textarea {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .contact-form button {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .social-icons img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .contact-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+    }
+
+    .contact-form h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-form p {
+        font-size: 1rem;
+    }
+}
 
