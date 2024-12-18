@@ -14,11 +14,13 @@ function Contact() {
     const [topic, setTopic] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [successMessage, setSuccessMessage] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         // Add your form submission logic here
         console.log("Form submitted", { name, email, topic, message });
+        setSuccessMessage("Thank you! Your message has been submitted successfully.");
     };
 
     return (
@@ -77,11 +79,13 @@ function Contact() {
                   <label><input type="checkbox" name="service" value="strategy" /> Strategy &amp; consulting</label>
                   <label><input type="checkbox" name="service" value="other" /> Other</label>
                 </div>
-                <button type="submit">Let's get started!</button>
+                {successMessage && <p className="success">{successMessage}</p>}
+                <button type="submit" disabled={successMessage}>Let's get started!</button>
               </form>
             </div>
           </div>
         </div>
+        
     );    
 }
 

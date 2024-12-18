@@ -51,7 +51,7 @@
   }
   
   .contact-info h2 {
-    color: #0a0835;
+    color: #3f3f3f;
     font-size: 2rem;
     margin-bottom: 0.5rem;
   }
@@ -187,7 +187,7 @@
     }
     
   
-  .contact-form button {
+    .contact-form button {
     background-color: #d4b483;
     color: white;
     border: none;
@@ -196,6 +196,15 @@
     font-size: 1rem;
     cursor: pointer;
   }
+
+  .contact-form .success {
+    color: #1bbecd;
+    margin-top: 1rem;
+    }
+    button:disabled {
+        background-color: grey;
+        cursor: not-allowed;
+    }
   
   .contact-form button:hover {
     background-color: #00a0b0;
