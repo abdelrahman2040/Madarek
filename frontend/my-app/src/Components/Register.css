@@ -1,0 +1,102 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #bfbbcc; /* Soft grayish purple background */
+  }
+  
+  /* Style the registration form container */
+  form {
+    background-color: rgb(61, 38, 88); /* Deep purple background */
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 6px rgba(27, 26, 26, 0.1);
+    width: 400px;
+    text-align: center;
+    margin-right: 50px; /* Adds space between form and image */
+  }
+  
+  /* Style the input fields */
+  input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+  }
+  
+  /* Input field focus effect */
+  input:focus {
+    border-color: #4caf50;
+    outline: none;
+  }
+  
+  /* Style the button */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #495c4a; /* Dark green background */
+    color: white;
+    border: none;
+    border-radius: 80px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #379437; /* Slightly lighter green */
+  }
+  
+  /* Style the heading */
+  h2 {
+    color: #1f1c1c;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Style for the "Sign up now" message */
+  .sign-up-message {
+    color: #fff;
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the website links section */
+  .website-links {
+    margin-top: 20px;
+    color: #fff;
+  }
+  
+  .website-links h3 {
+    font-size: 18px;
+  }
+  
+  .website-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .website-links li {
+    margin: 8px 0;
+  }
+  
+  .website-links a {
+    text-decoration: none;
+    color: #111812; /* Dark gray text */
+    font-weight: bold;
+  }
+  
+  .website-links a:hover {
+    color: #45a049; /* Green color on hover */
+  }
+  
+  /* Book image style */
+  .book-image {
+    width: 800px; /* Adjust the width to fit your design */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
