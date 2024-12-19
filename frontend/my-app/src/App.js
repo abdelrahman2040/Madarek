@@ -9,6 +9,8 @@ import{
 import Contact from './Components/Contact';
 import Login from './Components/Login';
 import Register from './Components/Register';
+import Product from './Components/Product';
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/Product" element={<Product />} />
         <Route path="*" element={<div>Page Not Found</div>} />
       </Routes>
     </Router>

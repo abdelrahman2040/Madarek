@@ -1,0 +1,284 @@
+.product-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: row; /* ترتيب الصورة بجانب التفاصيل */
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #e4dfda;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.product-image {
+    display: flex;
+    justify-content: center; /* لضمان أن الصورة في المنتصف أفقيًا */
+    align-items: center; /* لضمان أن الصورة في المنتصف عموديًا */
+    flex: 1 1 35%; /* تعيين المساحة بحيث تأخذ نصف الحاوية */
+    overflow: hidden; /* تأكد أن الصورة لا تتخطى حدود الحاوية */
+}
+
+.product-image img {
+    max-width: 65%;
+    max-height: 100%;
+    border-radius: 8px;
+    transform: scale(1.2); /* تصغير الصورة إلى 80% من حجمها الأصلي */
+    transition: transform 0.3s ease; /* اختياري لتأثير سلس عند تغيير الحجم */
+}
+
+.product-image img:hover {
+    transform: scale(1.5); /* تكبير الصورة إلى الحجم الأصلي عند التمرير */
+}
+
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1 1 50%; /* تعيين المساحة بحيث تأخذ نصف الحاوية */
+    padding-left: 20px; /* إضافة مسافة بين الصورة والتفاصيل */
+}
+
+.product-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.product-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.product-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4357ad;
+    margin-bottom: 1.5rem;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.btn-add-to-cart {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    background-color: #4357ad;
+    color: #e4dfda;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    margin-bottom: 0; /* إزالة الـ margin السالب */
+}
+
+.btn-add-to-cart:hover {
+    background-color: #1b308c;
+    transform: scale(1.02);
+}
+
+.cart-text {
+    margin-right: 20px;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.quantity-btn {
+    background-color: #48a9a6;
+    color: #e4dfda;
+    border: none;
+    border-radius: 20%;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.quantity-btn:hover {
+    background-color: #d4b483;
+    transform: scale(1.1);
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    font-size: 1rem;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+.social-share {
+    margin-top: 100px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.product-reviews {
+    margin-top: 3rem;
+    background-color: #d4b483;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-reviews h1{
+    color: #4357ad;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.review {
+    margin-bottom: 2rem;
+}
+
+.review-rating .star, .recommended-products .star{
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.recommended-products {
+    margin-top: 3rem;
+    margin-bottom: 7rem;
+    width: 100%; /* Ensure it takes full width of the parent container */
+}
+
+.recommended-container {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    overflow-y: hidden; /* Disables vertical scrolling */
+    padding: 20px; /* Adds space between products and the container edges */
+    direction: ltr; /* Ensure scroll direction is left to right */
+    width: 100%; /* Ensure it takes full width of the parent container */
+    /* Remove fixed height and let it adapt to content */
+}
+
+.recommended-product {
+    background-color: #e4dfda; /* Background color for each product */
+    border-radius: 5%;
+    flex: 0 0 auto; /* Prevent items from stretching */
+    text-align: center;
+    width: 250px; /* Fixed width for each product */
+    margin-bottom: 1rem; /* Space between products vertically */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Make space between elements */
+    height: auto; /* Let the height adjust based on content */
+}
+
+.recommended-img {
+    width: 100%;
+    height: 180px; /* Fixed height for the image */
+    object-fit: cover; /* Maintain aspect ratio and cover the box */
+    border-radius: 8px;
+}
+
+.recommended-product h3 {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.recommended-product p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.recommended-product button {
+    margin-top: 1rem;
+    padding: 10px 15px;
+    background-color: #4357ad;
+    color: #e4dfda;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.recommended-product button:hover {
+    background-color: #1b308c;
+}
+
+/* Styling for horizontal scrollbar */
+.recommended-container::-webkit-scrollbar {
+    height: 10px; /* Increase the height to make the scrollbar thicker */
+}
+
+.recommended-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 8px;
+}
+
+.recommended-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.recommended-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+
+
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column; /* الصورة فوق التفاصيل */
+        text-align: center; /* محاذاة النص في المنتصف */
+    }
+
+    .product-image {
+        flex: none; /* تعطيل نسبة المساحة */
+        margin-bottom: 20px; /* إضافة مسافة بين الصورة والتفاصيل */
+    }
+
+    .product-details {
+        padding-left: 0; /* إزالة المسافة الجانبية */
+    }
+}
