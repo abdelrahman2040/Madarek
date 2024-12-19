@@ -1,0 +1,312 @@
+/* Profile Container */
+
+.profile-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Profile Header */
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.profile-header h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.profile-quote {
+  font-size: 28px;
+  font-style: italic;
+  color: gray;
+}
+
+/* Profile Box */
+
+.profile-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+}
+
+.profile-section {
+  flex: 1;
+  min-width: 350px;
+  box-sizing: border-box;
+}
+
+.profile-section h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.profile-section p,
+.profile-section ul {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Book Input Field */
+
+.book-item input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+/* Profile Section Inputs */
+
+.profile-section input,
+.profile-section textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.profile-section textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Image Section */
+
+.image-container {
+  text-align: center;
+  position: relative;
+  margin-top: 60px;
+}
+
+.image-box img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.image-actions {
+  position: absolute;
+  top: 220px;
+  right: 75px;
+  padding: 5px;
+}
+
+.camera-icon img {
+  width: 50px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Image Actions */
+
+.image-actions {
+  position: absolute;
+  top: 220px;
+  right: 75px;
+  padding: 5px;
+}
+
+.camera-icon img {
+  width: 50px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.image-menu {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  top: 50px;
+  left: 0;
+  z-index: 0;
+  display: none;
+}
+
+.image-container:hover .image-menu {
+  display: block;
+}
+
+.menu-item {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  width: 100px;
+  height: 30px;
+}
+
+.menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+.details-container {
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.details-container h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.detail-item {
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 10px;
+}
+
+.detail-item strong {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  margin-right: 5px;
+}
+
+.detail-item input,
+.detail-item textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.detail-item input[type="number"],
+.detail-item input[type="text"],
+.detail-item input[type="email"] {
+  width: calc(100% - 20px);
+}
+
+.edit-profile-btn {
+  position: absolute;
+  right: 25%;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 10%;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.edit-profile-btn:hover {
+  background-color: #0056b3;
+}
+
+.remove-book-btn,
+.add-book-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-book-btn {
+  width: 380px;
+}
+
+.add-book-btn:hover,
+.remove-book-btn:hover {
+  background-color: #218838;
+}
+
+.add-book-btn,
+.remove-book-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-book-btn:hover,
+.remove-book-btn:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .profile-header h1 {
+    font-size: 28px;
+  }
+  .profile-quote {
+    font-size: 16px;
+  }
+  .profile-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-section {
+    width: 100%;
+  }
+  .image-box img {
+    width: 120px;
+    height: 120px;
+  }
+  .edit-profile-btn {
+    width: auto;
+  }
+  .details-container h2 {
+    font-size: 24px;
+  }
+  .detail-item {
+    font-size: 14px;
+  }
+  .add-book-btn,
+  .remove-book-btn {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-header h1 {
+    font-size: 24px;
+  }
+  .profile-quote {
+    font-size: 14px;
+  }
+  .profile-section h2 {
+    font-size: 20px;
+  }
+  .profile-section p {
+    font-size: 14px;
+  }
+  .profile-section input,
+  .profile-section textarea {
+    font-size: 14px;
+  }
+  .image-box img {
+    width: 100px;
+    height: 100px;
+  }
+  .profile-box {
+    gap: 10px;
+  }
+  .profile-section input,
+  .profile-section textarea {
+    font-size: 14px;
+  }
+  .edit-profile-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
