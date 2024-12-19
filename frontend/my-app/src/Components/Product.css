@@ -8,7 +8,7 @@
 
 .product-container {
     display: flex;
-    flex-direction: row; /* ترتيب الصورة بجانب التفاصيل */
+    flex-direction: row;
     max-width: 100%;
     margin: 0 auto;
     background-color: #e4dfda;
@@ -20,31 +20,30 @@
 
 .product-image {
     display: flex;
-    justify-content: center; /* لضمان أن الصورة في المنتصف أفقيًا */
-    align-items: center; /* لضمان أن الصورة في المنتصف عموديًا */
-    flex: 1 1 35%; /* تعيين المساحة بحيث تأخذ نصف الحاوية */
-    overflow: hidden; /* تأكد أن الصورة لا تتخطى حدود الحاوية */
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 35%;
+    overflow: hidden;
 }
 
 .product-image img {
     max-width: 65%;
     max-height: 100%;
     border-radius: 8px;
-    transform: scale(1.2); /* تصغير الصورة إلى 80% من حجمها الأصلي */
-    transition: transform 0.3s ease; /* اختياري لتأثير سلس عند تغيير الحجم */
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
 }
 
 .product-image img:hover {
-    transform: scale(1.5); /* تكبير الصورة إلى الحجم الأصلي عند التمرير */
+    transform: scale(1.5);
 }
-
 
 .product-details {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    flex: 1 1 50%; /* تعيين المساحة بحيث تأخذ نصف الحاوية */
-    padding-left: 20px; /* إضافة مسافة بين الصورة والتفاصيل */
+    flex: 1 1 50%;
+    padding-left: 20px;
 }
 
 .product-title {
@@ -91,7 +90,7 @@
     max-width: 400px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, background-color 0.2s ease;
-    margin-bottom: 0; /* إزالة الـ margin السالب */
+    margin-bottom: 0;
 }
 
 .btn-add-to-cart:hover {
@@ -107,7 +106,6 @@
     display: flex;
     align-items: center;
     gap: 10px;
-
 }
 
 .quantity-btn {
@@ -140,7 +138,6 @@
     border-radius: 5px;
 }
 
-
 .social-share {
     margin-top: 100px;
 }
@@ -148,7 +145,6 @@
 .social-icons {
     display: flex;
     gap: 15px;
-    
 }
 
 .social-icons img {
@@ -170,16 +166,17 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.product-reviews h1{
+.product-reviews h1 {
     color: #4357ad;
     margin-bottom: 2rem;
     text-align: center;
 }
+
 .review {
     margin-bottom: 2rem;
 }
 
-.review-rating .star, .recommended-products .star{
+.review-rating .star, .recommended-products .star {
     color: #000;
     font-size: 1.5rem;
 }
@@ -187,39 +184,38 @@
 .recommended-products {
     margin-top: 3rem;
     margin-bottom: 7rem;
-    width: 100%; /* Ensure it takes full width of the parent container */
+    width: 100%;
 }
 
 .recommended-container {
     display: flex;
     gap: 20px;
     justify-content: flex-start;
-    overflow-x: auto; /* Enables horizontal scrolling */
-    overflow-y: hidden; /* Disables vertical scrolling */
-    padding: 20px; /* Adds space between products and the container edges */
-    direction: ltr; /* Ensure scroll direction is left to right */
-    width: 100%; /* Ensure it takes full width of the parent container */
-    /* Remove fixed height and let it adapt to content */
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 20px;
+    direction: ltr;
+    width: 100%;
 }
 
 .recommended-product {
-    background-color: #e4dfda; /* Background color for each product */
+    background-color: #e4dfda;
     border-radius: 5%;
-    flex: 0 0 auto; /* Prevent items from stretching */
+    flex: 0 0 auto;
     text-align: center;
-    width: 250px; /* Fixed width for each product */
-    margin-bottom: 1rem; /* Space between products vertically */
+    width: 250px;
+    margin-bottom: 1rem;
     padding: 1rem;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: space-between; /* Make space between elements */
-    height: auto; /* Let the height adjust based on content */
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
 }
 
 .recommended-img {
     width: 100%;
-    height: 180px; /* Fixed height for the image */
-    object-fit: cover; /* Maintain aspect ratio and cover the box */
+    height: 180px;
+    object-fit: cover;
     border-radius: 8px;
 }
 
@@ -247,9 +243,8 @@
     background-color: #1b308c;
 }
 
-/* Styling for horizontal scrollbar */
 .recommended-container::-webkit-scrollbar {
-    height: 10px; /* Increase the height to make the scrollbar thicker */
+    height: 10px;
 }
 
 .recommended-container::-webkit-scrollbar-thumb {
@@ -266,19 +261,18 @@
     border-radius: 8px;
 }
 
-
 @media (max-width: 768px) {
     .product-container {
-        flex-direction: column; /* الصورة فوق التفاصيل */
-        text-align: center; /* محاذاة النص في المنتصف */
+        flex-direction: column;
+        text-align: center;
     }
 
     .product-image {
-        flex: none; /* تعطيل نسبة المساحة */
-        margin-bottom: 20px; /* إضافة مسافة بين الصورة والتفاصيل */
+        flex: none;
+        margin-bottom: 20px;
     }
 
     .product-details {
-        padding-left: 0; /* إزالة المسافة الجانبية */
+        padding-left: 0;
     }
 }

@@ -7,7 +7,7 @@
   }
   
   /* Style the registration form container */
-  form {
+  .form {
     background-color: rgb(61, 38, 88); /* Deep purple background */
     padding: 40px;
     border-radius: 30px;
@@ -18,7 +18,7 @@
   }
   
   /* Style the input fields */
-  input {
+  .input {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
@@ -28,13 +28,13 @@
   }
   
   /* Input field focus effect */
-  input:focus {
+  .input:focus {
     border-color: #4caf50;
     outline: none;
   }
   
   /* Style the button */
-  button {
+  .button {
     width: 100%;
     padding: 12px;
     background-color: #495c4a; /* Dark green background */
@@ -46,12 +46,12 @@
   }
   
   /* Button hover effect */
-  button:hover {
+  .button:hover {
     background-color: #379437; /* Slightly lighter green */
   }
   
   /* Style the heading */
-  h2 {
+  .h2 {
     color: #1f1c1c;
     font-family: 'Arial', sans-serif;
   }
