@@ -19,50 +19,27 @@ const userSchema = new mongoose.Schema(
       lowercase: true,
     },
     phone: String,
-<<<<<<< HEAD
-=======
     profileImg: String,
->>>>>>> b7138d88b9392c9e12a500889fc957fa8555f810
 
     password: {
       type: String,
       required: [true, 'password required'],
       minlength: [6, 'Too short password'],
     },
-<<<<<<< HEAD
     role: {
       type: String,
       enum: ['user', 'admin'],
-=======
-    passwordChangedAt: Date,
-    passwordResetCode: String,
-    passwordResetExpires: Date,
-    passwordResetVerified: Boolean,
-    role: {
-      type: String,
-      enum: ['user', 'manager', 'admin'],
->>>>>>> b7138d88b9392c9e12a500889fc957fa8555f810
-      default: 'user',
-    },
+    }
+    ,
     active: {
       type: Boolean,
       default: true,
     },
-<<<<<<< HEAD
-=======
-
-   
->>>>>>> b7138d88b9392c9e12a500889fc957fa8555f810
   },
   { timestamps: true }
 );
 
-<<<<<<< HEAD
 
-const User = mongoose.model('User', userSchema);
-
-module.exports = User;
-=======
 userSchema.pre('save', async function (next) {
   if (!this.isModified('password')) return next();
   // Hashing user password
@@ -73,4 +50,4 @@ userSchema.pre('save', async function (next) {
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
->>>>>>> b7138d88b9392c9e12a500889fc957fa8555f810
+

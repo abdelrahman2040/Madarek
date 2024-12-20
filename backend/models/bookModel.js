@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-<<<<<<< HEAD
-const slugify = require('slugify');
-=======
 
->>>>>>> b7138d88b9392c9e12a500889fc957fa8555f810
+const slugify = require('slugify');
+
+
+
 const bookSchema = new mongoose.Schema(
   {
     title: {
@@ -42,12 +42,8 @@ const bookSchema = new mongoose.Schema(
     },
 
     imageCover: {
-      type: String,
-<<<<<<< HEAD
-      
-=======
+      type: String,      
       required: [true, 'Book Image cover is required'],
->>>>>>> b7138d88b9392c9e12a500889fc957fa8555f810
     },
 
   },
