@@ -1,6 +1,5 @@
 const asyncHandler = require('express-async-handler');
 const User = require('../models/userModel');
-const slugify = require('slugify');
 const bcrypt = require('bcryptjs');
 
 // @desc    Get list of users

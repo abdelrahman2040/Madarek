@@ -28,7 +28,6 @@ exports.createBook = asyncHandler(async (req, res) => {
       message: 'Book title is required',
     });
   }
-
   const book = await Book.create({
     title,
     description,

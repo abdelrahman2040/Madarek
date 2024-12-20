@@ -11,7 +11,6 @@ const calcTotalCartPrice = (cart) => {
   cart.totalPriceAfterDiscount = undefined;
   return totalPrice;
 };
-
 // Add Book To Cart
 exports.addBookToCart = asyncHandler(async (req, res, next) => {
   const { bookId, color } = req.body;

@@ -1,4 +1,4 @@
-const slugify = require('slugify');
+
 const asyncHandler = require('express-async-handler');
 const Book = require('../models/reviewModel');
 

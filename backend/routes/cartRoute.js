@@ -13,5 +13,4 @@ router.use(authService.protect, authService.allowedTo('user'));
 router.route("/").post(addBookToCart);
 
 router.route("/:itemId").delete(removeSpecificCartItem);
-
 module.exports = router;
