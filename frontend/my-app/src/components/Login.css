@@ -1,117 +1,103 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
 
-  
-  /* Style for the entire login container */
-  .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%; /* Ensure full width */
-    position: relative; /* Allow absolute positioning of elements inside */
-    z-index: 1; /* Ensure the container is above the background image */
+/* Style for the login form */
+.form {
+  background-color: rgba(76, 93, 141, 0.9);
+  padding: 80px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.form:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.h2 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ece3e3;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  border-color: #45a049;
+  outline: none;
+  box-shadow: 0 0 5px rgba(72, 191, 72, 0.5);
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  background-color: #45a049;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #379437;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  /* Style for the login form container */
-  /* Style for the login form */
-  .form {
-    background-color: rgba(171, 190, 170, 0.9);
-    padding: 80px;
-    border-radius: 20px;
-    width: 100%;
-    max-width: 440px;
+  100% {
+    opacity: 1;
   }
-  
-  /* Hover effect for the form */
-  .form:hover {
-    transform: translateY(-10px); /* Slight lift on hover */
-    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2); /* More prominent shadow */
-  }
-  
-  /* Style for the form header (Login Title) */
-  .h2 {
-    color: white;
-    font-size: 28px;
-    margin-bottom: 20px;
-    font-weight: bold;
-  }
-  
-  /* Style for the input fields */
-  .input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ece3e3;
-    border-radius: 8px; /* Rounded corners for inputs */
-    font-size: 16px;
-    transition: border-color 0.3s ease; /* Smooth transition */
-  }
-  
-  /* Style for the input fields when they are focused */
-  .input:focus {
-    border-color: #45a049; /* Light green border on focus */
-    outline: none;
-    box-shadow: 0 0 5px rgba(72, 191, 72, 0.5); /* Subtle focus shadow */
-  }
-  
-  /* Style for the submit button */
-  .button {
-    width: 100%;
-    padding: 12px;
-    background-color: #45a049; /* Green button */
-    color: white;
-    border: none;
-    border-radius: 8px; /* Rounded corners */
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition */
-  }
-  
-  /* Style for the button on hover */
-  .button:hover {
-    background-color: #379437; /* Darker green when hovered */
-  }
-  
-  /* Style for error or success messages */
-  .error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 10px;
-    animation: fadeIn 1s ease-in-out; /* Fade-in animation for error message */
-  }
-  
-  /* Keyframe for fade-in animation */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  /* Style for social media login links */
-  .social-links {
-    margin-top: 20px;
-  }
-  
-  .social-links a {
-    display: block;
-    padding: 12px;
-    margin: 8px 0;
-    text-align: center;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .social-links a.google {
-    background-color: #db4437; /* Google red */
-  }
-  
-  /* Hover effects for social media links */
-  .social-links a:hover {
-    opacity: 0.9;
-  }
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: block;
+  padding: 12px;
+  margin: 8px 0;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-links a.google {
+  background-color: #db4437;
+}
+
+.social-links a:hover {
+  opacity: 0.9;
+}

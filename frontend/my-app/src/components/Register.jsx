@@ -4,7 +4,7 @@ import './Register.css';
 function Register({ setAuth }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [year, setYear] = useState("");  // Fixed variable name from 'username' to 'year'
+  const [year, setYear] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
 
@@ -28,8 +28,8 @@ function Register({ setAuth }) {
 
   return (
     <div className="register-container">
-      <div>
-        <h2>Register</h2>
+      <div className="form">
+        <h2 className="h2">Register</h2>
         <p className="sign-up-message">Sign up now and get full access to our app!</p>
 
         <form onSubmit={handleSubmit}>
@@ -39,6 +39,7 @@ function Register({ setAuth }) {
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             required
+            className="input"
           />
           <input
             type="text"
@@ -46,13 +47,15 @@ function Register({ setAuth }) {
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             required
+            className="input"
           />
           <input
             type="text"
             placeholder="Year"
             value={year}
-            onChange={(e) => setYear(e.target.value)}  // Fixed variable name here
+            onChange={(e) => setYear(e.target.value)}
             required
+            className="input"
           />
           <input
             type="email"
@@ -60,6 +63,7 @@ function Register({ setAuth }) {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            className="input"
           />
           <input
             type="password"
@@ -67,8 +71,9 @@ function Register({ setAuth }) {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            className="input"
           />
-          <button type="submit">Register</button>
+          <button type="submit" className="button">Register</button>
         </form>
 
         <div className="website-links">
