@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
+const cors = require('cors');
 const livereload = require("livereload");
 const connectLivereload = require("connect-livereload");
 const bcrypt = require("bcrypt");
@@ -28,6 +29,7 @@ liveReloadServer.watch(path.join(__dirname, "public"));
 app.use(connectLivereload());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 
 // Auto refresh for development
 liveReloadServer.server.once("connection", () => {
