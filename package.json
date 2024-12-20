@@ -1,0 +1,20 @@
+{
+  "name": "madarek",
+  "version": "1.0.0",
+  "description": "Books E-commerce which sell books for reading lovers using MERN(Mongo+Express+React+Node)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdelrahman2040/Madarek.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdelrahman2040/Madarek/issues"
+  },
+  "homepage": "https://github.com/abdelrahman2040/Madarek#readme"
+}

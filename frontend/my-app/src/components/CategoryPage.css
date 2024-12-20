@@ -1,0 +1,22 @@
+.category-page {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Category heading */
+.category-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #444;
+}
+
+/* Books grid container */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Flexible columns */
+    gap: 1.5rem; /* Spacing between items */
+    justify-items: center; /* Center items horizontally */
+    padding: 0 1rem;
+}
