@@ -4,7 +4,7 @@ const path = require("path");
 const livereload = require("livereload");
 const connectLivereload = require("connect-livereload");
 const bcrypt = require("bcrypt");
-require("dotenv").config(); // Load environment variables
+require("dotenv").config();
 
 // Import Routes
 const bookRoute = require('./routes/bookRoute');
