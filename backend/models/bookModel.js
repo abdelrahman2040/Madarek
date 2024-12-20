@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+const slugify = require('slugify');
 const bookSchema = new mongoose.Schema(
   {
     title: {
@@ -39,7 +39,7 @@ const bookSchema = new mongoose.Schema(
 
     imageCover: {
       type: String,
-      required: [true, 'Book Image cover is required'],
+      
     },
 
   },
