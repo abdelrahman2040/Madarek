@@ -18,4 +18,8 @@ router
     .put(authService.protect,authService.allowedTo('admin'), updateBook)
     .delete(authService.protect,authService.allowedTo('admin'), deleteBook);
 
+<<<<<<< HEAD
 module.exports = router;
+=======
+module.exports = router;
+>>>>>>> baa586ff24f071387f6a981d6d3bfe41b7571000
