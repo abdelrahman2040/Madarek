@@ -31,10 +31,6 @@ exports.createBook = asyncHandler(async (req, res) => {
 
   const book = await Book.create({
     title,
-<<<<<<< HEAD
-=======
-    slug: slugify(title, { lower: true }),
->>>>>>> baa586ff24f071387f6a981d6d3bfe41b7571000
     description,
     quantity,
     price,
@@ -54,10 +50,6 @@ exports.updateBook = asyncHandler(async (req, res) => {
     id,
     {
       title,
-<<<<<<< HEAD
-=======
-      slug: slugify(title, { lower: true }),
->>>>>>> baa586ff24f071387f6a981d6d3bfe41b7571000
       description,
       quantity,
       price,
@@ -84,8 +76,4 @@ exports.deleteBook = asyncHandler(async (req, res) => {
   }
 
   res.status(204).json({ data: book });
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> baa586ff24f071387f6a981d6d3bfe41b7571000
