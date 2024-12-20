@@ -21,12 +21,8 @@
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
     "livereload": "^0.9.3",
-<<<<<<< HEAD
     "mongodb": "^6.12.0",
     "mongoose": "^8.9.2",
-=======
-    "mongoose": "^8.9.1",
->>>>>>> baa586ff24f071387f6a981d6d3bfe41b7571000
     "slugify": "^1.6.6"
   }
 }
