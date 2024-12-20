@@ -1,56 +1,73 @@
 import React, { useState } from "react";
 import './Login.css';
+import logo from '../Assets/test.jpeg'; 
+import { Link } from "react-router-dom";
 
 function Login({ setAuth }) {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");  // State for error message
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState(""); 
+  const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    if (!email || !password) {
+      setError("Please enter both email and password");
+      return;
+    }
 
-    // Mock backend logic for authentication
-    const mockBackend = {
-      username: "admin",
-      password: "password123",  
-    };
-
-    if (username === mockBackend.username && password === mockBackend.password) {
+    if (email === "admin@example.com" && password === "123456") {
       setAuth(true);
-      alert("Login Successful");
+      alert("Login Successful!");
     } else {
-      setError("Invalid Username or Password");
+      setError("Invalid email or password");
     }
   };
 
   return (
     <div className="login-container">
-      <form onSubmit={handleSubmit} className="form">
-        <h2 className="h2">Login</h2>
-        <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          className="input"
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="input"
-        />
-        {error && <div className="error-message">{error}</div>}
-        <button type="submit" className="button">Login</button>
+      <form onSubmit={handleSubmit} className="login-form">
+        <div className="logo-container">
+          <img src={logo} alt="Madarek Logo" className="logo" />
+        </div>
+        
+        <h2>Login</h2>
+        
+        <div className="form-group">
+          <label>Email:</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your email"
+          />
+        </div>
 
-        {/* Social Media Login Links */}
-        <div className="social-links">
-          <a href="https://accounts.google.com" className="google">Login with Google</a>
+        <div className="form-group">
+          <label>Password:</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Enter your password"
+          />
+        </div>
+
+        {error && <div className="error">{error}</div>}
+
+        <div className="center-wrapper">
+          <div className="button-container">
+            <button type="submit">Login</button>
+          </div>
+        </div>
+        
+        <div className="links">
+          <a href="#">Forgot Password?</a>
+          <Link to="/register">Create New Account</Link>
         </div>
       </form>
     </div>
   );
 }
 
-export default Login;
+export  default  Login;
