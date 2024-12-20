@@ -1,8 +1,5 @@
 const mongoose = require('mongoose');
 
-const slugify = require('slugify');
-
-
 
 const bookSchema = new mongoose.Schema(
   {
@@ -12,11 +9,6 @@ const bookSchema = new mongoose.Schema(
       trim: true,
       minlength: [3, 'Too short book title'],
       maxlength: [100, 'Too long book title'],
-    },
-    slug: {
-      type: String,
-      required: true,
-      lowercase: true,
     },
     description: {
       type: String,
