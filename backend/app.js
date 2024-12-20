@@ -4,15 +4,7 @@ const path = require("path");
 const livereload = require("livereload");
 const connectLivereload = require("connect-livereload");
 const bcrypt = require("bcrypt");
-require("dotenv").config(); 
-
-// Import Routes
-const bookRoute = require('./routes/bookRoute');
-const userRoute = require('./routes/userRoute');
-const authRoute = require('./routes/authRoute');
-const cartRoute = require('./routes/cartRoute');
-const reviewRoute = require('./routes/reviewRoute');
-
+require("dotenv").config(); // Load environment variables
 
 const port = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://mezo:CR7@cluster0.af6ud0j.mongodb.net/Madarek?retryWrites=true&w=majority&appName=Cluster0";
