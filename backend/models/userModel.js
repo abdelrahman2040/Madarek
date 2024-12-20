@@ -8,10 +8,6 @@ const userSchema = new mongoose.Schema(
       trim: true,
       required: [true, 'name required'],
     },
-    slug: {
-      type: String,
-      lowercase: true,
-    },
     email: {
       type: String,
       required: [true, 'email required'],

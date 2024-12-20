@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Product = require('./productModel');
+const Product = require('./bookModel');
 
 const reviewSchema = new mongoose.Schema(
   {
@@ -18,10 +18,10 @@ const reviewSchema = new mongoose.Schema(
       required: [true, 'Review must belong to user'],
     },
     // parent reference (one to many)
-    product: {
+    book: {
       type: mongoose.Schema.ObjectId,
-      ref: 'Product',
-      required: [true, 'Review must belong to product'],
+      ref: 'Book',
+      required: [true, 'Review must belong to brook'],
     },
   },
   { timestamps: true }

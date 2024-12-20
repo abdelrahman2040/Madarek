@@ -1,42 +1,68 @@
-const factory = require('./handlersFactory');
-const Review = require('../models/reviewModel');
-
-// Nested route
-// GET /api/v1/products/:productId/reviews
-exports.createFilterObj = (req, res, next) => {
-  let filterObject = {};
-  if (req.params.productId) filterObject = { product: req.params.productId };
-  req.filterObj = filterObject;
-  next();
-};
+const slugify = require('slugify');
+const asyncHandler = require('express-async-handler');
+const Book = require('../models/reviewModel');
 
 // @desc    Get list of reviews
-// @route   GET /api/v1/reviews
-// @access  Public
-exports.getReviews = factory.getAll(Review);
+exports.getReviews = asyncHandler(async (req, res) => {
+  const reviews= await Review.find({});
+  res.status(200).json({ results: reviews.length, data: reviews });
+});
 
 // @desc    Get specific review by id
-// @route   GET /api/v1/reviews/:id
-// @access  Public
-exports.getReview = factory.getOne(Review);
+exports.getReview = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const review = await Review.findById(id);
+  if (!review) {
+    return res.status(404).json({ msg: `No review for this id ${id}` });
+  }
+  res.status(200).json({ data: review });
+});
 
+// @desc    Create a new review
+exports.createReview = asyncHandler(async (req, res) => {
+
+  if (!title) {
+    return res.status(400).json({
+      status: 'failed',
+      message: 'review title is required',
+    });
+  }
+
+  const review = await Review.create(req.body);
+
+  res.status(201).json({ status: 'success', data: review });
+});
+
+// @desc    Update specific review
+exports.updateReview = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+
+  const review = await Review.findByIdAndUpdate(
+    id,
+    req.body
+  );
+
+  if (!review) {
+    return res.status(404).json({ msg: `No review for this id ${id}` });
+  }
+
+  res.status(200).json({ data: review });
+});
+
+// @desc    Delete specific review
+exports.deleteReview = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const review = await Review.findByIdAndDelete(id);
+
+  if (!book) {
+    return res.status(404).json({ msg: `No review for this id ${id}` });
+  }
+
+  res.status(204).json({ data: review });
+});
 // Nested route (Create)
 exports.setProductIdAndUserIdToBody = (req, res, next) => {
   if (!req.body.product) req.body.product = req.params.productId;
   if (!req.body.user) req.body.user = req.user._id;
   next();
 };
-// @desc    Create review
-// @route   POST  /api/v1/reviews
-// @access  Private/Protect/User
-exports.createReview = factory.createOne(Review);
-
-// @desc    Update specific review
-// @route   PUT /api/v1/reviews/:id
-// @access  Private/Protect/User
-exports.updateReview = factory.updateOne(Review);
-
-// @desc    Delete specific review
-// @route   DELETE /api/v1/reviews/:id
-// @access  Private/Protect/User-Admin-Manager
-exports.deleteReview = factory.deleteOne(Review);

@@ -31,7 +31,6 @@ exports.createBook = asyncHandler(async (req, res) => {
 
   const book = await Book.create({
     title,
-    slug: slugify(title, { lower: true }),
     description,
     quantity,
     price,
@@ -51,7 +50,6 @@ exports.updateBook = asyncHandler(async (req, res) => {
     id,
     {
       title,
-      slug: slugify(title, { lower: true }),
       description,
       quantity,
       price,

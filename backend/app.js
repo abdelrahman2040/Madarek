@@ -11,6 +11,7 @@ const bookRoute = require('./routes/bookRoute');
 const userRoute = require('./routes/userRoute');
 const authRoute = require('./routes/authRoute');
 const cartRoute = require('./routes/cartRoute');
+const reviewRoute = require('./routes/reviewRoute');
 
 
 const port = process.env.PORT || 5000;
@@ -43,6 +44,7 @@ app.use('/api/v1/books', bookRoute);
 app.use('/api/v1/users', userRoute); // for only admin
 app.use('/api/v1/auth', authRoute);
 app.use('/api/v1/cart', cartRoute);
+app.use('/api/v1/reviews', reviewRoute);
 
 // MongoDB connection and server startup
 mongoose

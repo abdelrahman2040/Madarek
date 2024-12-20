@@ -13,11 +13,7 @@ const bookSchema = new mongoose.Schema(
       minlength: [3, 'Too short book title'],
       maxlength: [100, 'Too long book title'],
     },
-    slug: {
-      type: String,
-      required: true,
-      lowercase: true,
-    },
+
     description: {
       type: String,
       required: [true, 'Book description is required'],
