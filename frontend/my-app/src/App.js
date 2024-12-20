@@ -10,6 +10,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Product from "./components/Product";
 import ProfilePage from "./components/ProfilePage";
+import BookPage from './components/BookPage';
 
 function App() {
     const [login,setLogin] = useState(false);
@@ -35,6 +36,7 @@ function App() {
                 <Route path="/register" element={<Register />} />
                 <Route path="/product" element={<Product />} />
                 <Route path="/profile" element={<ProfilePage />} />
+                <Route path="/book/:id" element={<BookPage/>} />
                 
             </Routes>
         </Router>
