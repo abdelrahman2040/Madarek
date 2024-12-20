@@ -25,22 +25,24 @@ function Login({ setAuth }) {
 
   return (
     <div className="login-container">
-      <form onSubmit={handleSubmit}>
-        <h2>Login</h2>
+      <form onSubmit={handleSubmit} className="form">
+        <h2 className="h2">Login</h2>
         <input
           type="text"
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          className="input"
         />
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          className="input"
         />
         {error && <div className="error-message">{error}</div>}
-        <button type="submit">Login</button>
+        <button type="submit" className="button">Login</button>
 
         {/* Social Media Login Links */}
         <div className="social-links">
