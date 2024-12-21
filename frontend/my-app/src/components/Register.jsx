@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import './Register.css';
 
 function Register({ setAuth }) {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [year, setYear] = useState("");
+  const [usertName, setUserName] = useState("");
+
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
 
@@ -13,12 +12,12 @@ function Register({ setAuth }) {
 
     // Mock backend logic
     const mockBackend = {
-      year: "2024", // Assuming year is an important field
+     
       password: "password123",
       email: "admin@example.com",
     };
 
-    if (year === mockBackend.year && password === mockBackend.password && email === mockBackend.email) {
+    if (  password === mockBackend.password && email === mockBackend.email) {
       setAuth(true);
       alert("Registration Successful");
     } else {
@@ -35,28 +34,14 @@ function Register({ setAuth }) {
         <form onSubmit={handleSubmit}>
           <input
             type="text"
-            placeholder="First Name"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
+            placeholder="user Name"
+            value={usertName}
+            onChange={(e) => setUserName(e.target.value)}
             required
             className="input"
           />
-          <input
-            type="text"
-            placeholder="Last Name"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            required
-            className="input"
-          />
-          <input
-            type="text"
-            placeholder="Year"
-            value={year}
-            onChange={(e) => setYear(e.target.value)}
-            required
-            className="input"
-          />
+         
+          
           <input
             type="email"
             placeholder="Email"
