@@ -12,7 +12,7 @@ import Product from "./components/Product";
 import ProfilePage from "./components/ProfilePage";
 
 function App() {
-    const [login,setLogin] = useState(false);
+    const [login,setLogin] = useState(true);
     const [cart, setCart] = useState([]); // Track items in the cart
     const [query, setQuery] = useState(""); // Search query state
 
@@ -20,7 +20,6 @@ function App() {
     const addToCart = (item) => {
         setCart([...cart, item]);
     };
-
 
     return (
         <Router>
@@ -33,9 +32,8 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
-                <Route path="/product" element={<Product />} />
+                <Route path="/product/:id" element={<Product />} />
                 <Route path="/profile" element={<ProfilePage />} />
-                
             </Routes>
         </Router>
     );
