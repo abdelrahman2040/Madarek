@@ -3,12 +3,12 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #bfbbcc; /* Soft grayish purple background */
+  background-color: #c9c5d6; /* Soft grayish purple background */
 }
 
 /* Style the registration form container */
 .form {
-  background-color: rgb(61, 38, 88); /* Deep purple background */
+  background-color: rgb(214, 204, 226); /* Deep purple background */
   padding: 40px;
   border-radius: 30px;
   box-shadow: 0px 4px 6px rgba(27, 26, 26, 0.1);
