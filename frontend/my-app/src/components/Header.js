@@ -25,10 +25,10 @@ const Header = ({ cart, login, query, setQuery }) => {
                             <li><Link to="/register" onClick={() => setIsMenuOpen(false)}>Register</Link></li>
                         </>
                     )}
-                    <li><Link to="/categories" onClick={() => setIsMenuOpen(false)}>Categories</Link></li>
+                    {/* <li><Link to="/categories" onClick={() => setIsMenuOpen(false)}>Categories</Link></li> */}
                     <li><Link to="/bestsellers" onClick={() => setIsMenuOpen(false)}>Bestsellers</Link></li>
                     <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
-                    <li><Link to="/product" onClick={() => setIsMenuOpen(false)}>Product</Link></li>
+                    {/* <li><Link to="/product" onClick={() => setIsMenuOpen(false)}>Product</Link></li> */}
                 </ul>
             </nav>
             

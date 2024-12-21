@@ -45,36 +45,27 @@ function View() {
     };
 
     const recommendedProducts = [
-        {id: 0, image: "/images/book1.jpg", title: "Book Title 1", alt: "Book 1",description:"This is a short description", rateing: [
+        {id: 2, image: "/images/book3.jpg", price: 200, title: "Book Title 3", alt: "Book 3",description:"This is a short description too too", rateing: [
             { username: 'Ahmed', review: 'Great product! Very high quality.', rating: 5 },
             { username: 'Sarah', review: 'Very good product, but the price is a bit high.', rating: 4 },
             { username: 'Mahmoud', review: 'I can\'t say it\'s good enough.', rating: 2 },
         ]},
-        {id: 1, image: "/images/book2.jpg", title: "Book Title 2", alt: "Book 2",description:"This is a short description too", rateing: [
+        {id: 3, image: "/images/book3.jpg", price: 24, title: "Book Title 4", alt: "Book 4",description:"This is a short description too too", rateing: [
             { username: 'Ahmed', review: 'Great product! Very high quality.', rating: 5 },
             { username: 'Sarah', review: 'Very good product, but the price is a bit high.', rating: 4 },
             { username: 'Mahmoud', review: 'I can\'t say it\'s good enough.', rating: 2 },
         ]},
-        {id: 2, image: "/images/book3.jpg", title: "Book Title 3", alt: "Book 3",description:"This is a short description too too", rateing: [
+        {id: 3, image: "/images/book3.jpg", price: 134, title: "Book Title 4", alt: "Book 4",description:"This is a short description too too", rateing: [
             { username: 'Ahmed', review: 'Great product! Very high quality.', rating: 5 },
             { username: 'Sarah', review: 'Very good product, but the price is a bit high.', rating: 4 },
             { username: 'Mahmoud', review: 'I can\'t say it\'s good enough.', rating: 2 },
         ]},
-        {id: 2, image: "/images/book3.jpg", title: "Book Title 3", alt: "Book 3",description:"This is a short description too too", rateing: [
+        {id: 3, image: "/images/book3.jpg", price: 59, title: "Book Title 4", alt: "Book 4",description:"This is a short description too too", rateing: [
             { username: 'Ahmed', review: 'Great product! Very high quality.', rating: 5 },
             { username: 'Sarah', review: 'Very good product, but the price is a bit high.', rating: 4 },
             { username: 'Mahmoud', review: 'I can\'t say it\'s good enough.', rating: 2 },
         ]},
-        {id: 2, image: "/images/book3.jpg", title: "Book Title 3", alt: "Book 3",description:"This is a short description too too", rateing: [
-            { username: 'Ahmed', review: 'Great product! Very high quality.', rating: 5 },
-            { username: 'Sarah', review: 'Very good product, but the price is a bit high.', rating: 4 },
-            { username: 'Mahmoud', review: 'I can\'t say it\'s good enough.', rating: 2 },
-        ]},
-        {id: 2, image: "/images/book3.jpg", title: "Book Title 3", alt: "Book 3",description:"This is a short description too too", rateing: [
-            { username: 'Ahmed', review: 'Great product! Very high quality.', rating: 5 },
-            { username: 'Sarah', review: 'Very good product, but the price is a bit high.', rating: 4 },
-            { username: 'Mahmoud', review: 'I can\'t say it\'s good enough.', rating: 2 },
-        ]},
+
     ];
 
 
@@ -141,19 +132,24 @@ function View() {
 
             <div className="recommended-products">
                 <h2>Recommended Products</h2>
-                <div className="recommended-container">
-                    {recommendedProducts.map((book) => (
-                        <BookBox 
-                            id={book.id}
-                            image={book.image}
-                            title={book.title}
-                            alt={book.alt}
-                            description={book.description}
-                            review={book.rateing}
-                        />
-                    ))}
+                <div className="books-grid">
+                {Array.isArray(recommendedProducts) && recommendedProducts.map((book) => (
+                <div key={book.id} className="book-wrapper">
+                    <BookBox 
+                        id={book.id}
+                        image={book.image}
+                        title={book.title}
+                        alt={book.alt}
+                        description={book.description}
+                        price={book.price}
+                        review={book.rateing}
+                                />
+                            </div>
+                        ))}
                 </div>
+
             </div>
+            
 
             <div className="product-reviews" id="reviews-section">
                 <h2>Reviews</h2>
@@ -168,6 +164,8 @@ function View() {
                         </div>
                         {index !== product.reviews.length - 1 && <hr />}
                     </div>
+
+                    
                 ))}
             </div>
         </div>

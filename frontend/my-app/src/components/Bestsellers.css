@@ -1,8 +1,9 @@
 .bestsellers-container {
-    width: 100%;
-    max-width: 1500px;
+    /* width: 100%; */
+    max-width: 93%;
     margin: 2rem auto;
     padding: 0 20px;
+    
 }
 
 .bestsellers-title {
@@ -14,21 +15,8 @@
 
 .books-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 3rem;
-} 
-/* 
-@media (max-width: 1200px) {
-    .books-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; 
+    justify-content: center; 
 }
 
-@media (max-width: 768px) {
-    .books-grid {
-        grid-template-columns: minmax(0, 1fr);
-    }
-    .bestsellers-container {
-        padding: 0 10px;
-    }
-} */

@@ -12,7 +12,7 @@ import Product from "./components/Product";
 import ProfilePage from "./components/ProfilePage";
 
 function App() {
-    const [login,setLogin] = useState(true);
+    const [login,setLogin] = useState(false);
     const [cart, setCart] = useState([]); // Track items in the cart
     const [query, setQuery] = useState(""); // Search query state
 
