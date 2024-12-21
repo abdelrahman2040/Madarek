@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './Login.css';
-import logo from '../Assets/test.jpeg'; 
+import logo from '../Assets/logo.svg'; 
 import { Link } from "react-router-dom";
 
 function Login({ setAuth }) {
